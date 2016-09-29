@@ -1,0 +1,49 @@
+config/application.rb:    ENV['TZ'] = 'UTC'
+config/application.rb:    config.api_url  = ENV['BOUNTYSOURCE_API_URL']
+config/application.rb:    config.www_url  = ENV['BOUNTYSOURCE_WWW_URL']
+config/application.rb:    config.short_url = ENV['BOUNTYSOURCE_SHORT_URL']
+config/application.rb:    config.salt_url = ENV['BOUNTYSOURCE_SALT_URL']
+config/application.rb:    config.admin_secret = ENV['BOUNTYSOURCE_ADMIN_SECRET']
+config/application.rb:    config.team_invite_secret = ENV['BOUNTYSOURCE_TEAM_INVITE_SECRET']
+config/application.rb:    config.person_hash_secret = ENV['BOUNTYSOURCE_PERSON_HASH_SECRET']
+config/application.rb:    config.access_token_secret = ENV['BOUNTYSOURCE_ACCESS_TOKEN_SECRET']
+config/application.rb:    config.linked_account_secret = ENV['BOUNTYSOURCE_LINKED_ACCOUNT_SECRET']
+config/application.rb:    config.unsubscribe_secret = ENV['BOUNTYSOURCE_UNSUBSCRIBE_SECRET']
+config/application.rb:      user_name: ENV['SMTP_USERNAME'],
+config/application.rb:      password: ENV['SMTP_PASSWORD'],
+config/application.rb:      domain: ENV['SMTP_DOMAIN'],
+config/application.rb:      address: ENV['SMTP_HOST'],
+config/application.rb:      port: ENV['SMTP_PORT'].to_i,
+config/application.rb:    config.secret_token = ENV['COOKIE_SECRET_TOKEN']
+config/application.rb:    config.secret_key_base = ENV['COOKIE_SECRET_KEY_BASE']
+config/application.rb:    config.gittip_host = ENV['GITTIP_HOST']
+config/application.rb:    config.gittip_secret = ENV['GITTIP_SECRET']
+config/application.rb:    config.coinbase_secret = ENV['COINBASE_SECRET']
+config/application.rb:      api_key: ENV['COINBASE_API_KEY'],
+config/application.rb:      api_secret: ENV['COINBASE_API_SECRET'],
+config/application.rb:      client_id:      ENV['GITHUB_CLIENT_ID'],
+config/application.rb:      client_secret:  ENV['GITHUB_CLIENT_SECRET']
+config/application.rb:      id:     ENV['FACEBOOK_APP_ID'].to_i,
+config/application.rb:      secret: ENV['FACEBOOK_APP_SECRET']
+config/application.rb:      id:                          ENV['TWITTER_APP_ID'],
+config/application.rb:      secret:                      ENV['TWITTER_APP_SECRET'],
+config/application.rb:      bountysource_oauth_token:    ENV['TWITTER_APP_OAUTH_TOKEN'],
+config/application.rb:      bountysource_oauth_secret:   ENV['TWITTER_APP_OAUTH_SECRET']
+config/application.rb:      email: ENV['PAYPAL_EMAIL'],
+config/application.rb:      api_username: ENV['PAYPAL_API_USERNAME'],
+config/application.rb:      api_password: ENV['PAYPAL_API_PASSWORD'],
+config/application.rb:      api_signature: ENV['PAYPAL_API_SIGNATURE'],
+config/application.rb:      checkout_url: ENV['PAYPAL_SANDBOX']=='true' ? 'https://www.sandbox.paypal.com/' : 'https://www.paypal.com/',
+config/application.rb:      api_url: ENV['PAYPAL_SANDBOX']=='true' ? 'https://api-3t.sandbox.paypal.com/nvp' : 'https://api-3t.paypal.com/nvp'
+config/application.rb:      merchant_id: ENV['GOOGLE_WALLET_MERCHANT_ID'],
+config/application.rb:      merchant_secret: ENV['GOOGLE_WALLET_MERCHANT_SECRET']
+config/application.rb:    config.mixpanel_token = ENV['MIXPANEL_TOKEN']
+config/boot.rb:ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+config/boot.rb:require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
+config/database.yml:  uri = URI.parse(ENV["DATABASE_URL"])
+config/database.yml:raise "No RACK_ENV or RAILS_ENV found" unless ENV["RAILS_ENV"] || ENV["RACK_ENV"]
+config/database.yml:<%= ENV["RAILS_ENV"] || ENV["RACK_ENV"] %>:
+config/initializers/stripe.rb:Stripe.api_key = ENV['STRIPE_API_KEY']
+config/initializers/debugger.rb:if Rails.env.development? && ENV['DEBUGGER']
+config/puma.rb:workers Integer(ENV['PUMA_WORKERS'] || 0)
+config/puma.rb:threads_count = Integer(ENV['PUMA_THREADS'] || 1)

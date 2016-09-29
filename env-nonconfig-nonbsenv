@@ -1,0 +1,26 @@
+app/views/layouts/_env.html.erb:    cookie_name_access_token: '<%=ENV['COOKIE_NAME_ACCESS_TOKEN']%>',
+app/views/layouts/_env.html.erb:    cookie_name_shopping_cart: '<%=ENV['COOKIE_NAME_SHOPPING_CART']%>',
+app/views/layouts/_env.html.erb:    google_analytics: '<%=ENV['GOOGLE_ANALYTICS_SITE']%>',
+app/views/layouts/_env.html.erb:    stripe_key: '<%=ENV['STRIPE_PUBLIC_KEY']%>',
+app/controllers/application_controller.rb:    unless ENV['BOUNTYSOURCE_FULL_SITE_PASSWORD'].blank?
+app/controllers/application_controller.rb:      unless authenticate_with_http_basic { |user, password| password == ENV['BOUNTYSOURCE_FULL_SITE_PASSWORD'] }
+app/mailers/mailer.rb:    headers[:subject] = "[#{ENV['SMTP_SUBJECT_PREFIX']}] #{headers[:subject]}" unless ENV['SMTP_SUBJECT_PREFIX'].blank?
+app/mailers/mailer.rb:    if ENV['SMTP_WHITELIST'].blank? || ENV['SMTP_WHITELIST'].split(',').include?(headers[:to])
+app/models/github/event.rb:    url = "https://api.github.com/events?client_id=#{ENV['GITHUB_FIREHOSE_CLIENT_ID']}&client_secret=#{ENV['GITHUB_FIREHOSE_CLIENT_SECRET']}&page=#{page}"
+app/models/github/api.rb:    if !ENV['LIVE_API'] && Rails.env.test?
+bin/bundle:ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+lib/tasks/delayed_job_multi.rake:      :min_priority => ENV['MIN_PRIORITY'],
+lib/tasks/delayed_job_multi.rake:      :max_priority => ENV['MAX_PRIORITY'],
+lib/tasks/delayed_job_multi.rake:      :queues => (ENV['QUEUES'] || ENV['QUEUE'] || '').split(','),
+lib/tasks/delayed_job_multi.rake:      :num_processes => ENV['NUM_PROCESSES'] ? ENV['NUM_PROCESSES'].to_i : 1
+lib/heroku_timeout.rb:Rack::Timeout.timeout = ENV['RACK_TIMEOUT'].to_i if ENV['RACK_TIMEOUT']
+lib/heroku_timeout.rb:if ENV['POSTGRES_TIMEOUT']
+lib/heroku_timeout.rb:        execute("SET SESSION statement_timeout TO '#{ENV['POSTGRES_TIMEOUT'].to_i}s'")
+spec/rails_helper.rb:ENV['RAILS_ENV'] ||= 'test'
+spec/routing/proposals_routes_spec.rb:  before { Rack::MockRequest::DEFAULT_ENV["HTTP_ACCEPT"] = "application/vnd.bountysource+json; version=2" }
+spec/routing/teams_routes_spec.rb:  before { Rack::MockRequest::DEFAULT_ENV["HTTP_ACCEPT"] = "application/vnd.bountysource+json; version=2" }
+spec/routing/request_for_proposals_routes_spec.rb:  before { Rack::MockRequest::DEFAULT_ENV["HTTP_ACCEPT"] = "application/vnd.bountysource+json; version=2" }
+spec/support/capybara.rb:if ENV['SELENIUM']
+spec/support/capybara.rb:# if ENV['CI'] == 'true'
+spec/support/capybara.rb:#   if ENV['STAND_ALONE']
+spec/support/vcr.rb:  c.default_cassette_options = ENV['CI'] ? { record: :none } : { record: :new_episodes }

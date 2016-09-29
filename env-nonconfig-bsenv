@@ -1,0 +1,26 @@
+app/assets/javascripts/app/mixpanel.js:mixpanel.init(window.BS_ENV.mixpanel, window.BS_ENV.mixpanel_config);
+app/assets/javascripts/app/env.js:angular.module('app').constant('$env', window.BS_ENV).run(function($rootScope, $env) {
+app/assets/javascripts/app/google_analytics.js:ga('create', window.BS_ENV.google_analytics, 'auto');
+app/assets/javascripts/common/services/api.js.erb:          var access_token = $cookieJar.getJson(window.BS_ENV.cookie_name_access_token);
+app/assets/javascripts/common/services/api.js.erb:  this.access_token_cookie_name = window.BS_ENV.cookie_name_access_token;
+app/assets/javascripts/common/services/api.js.erb:  $rootScope.api_host = window.BS_ENV.api_host;
+app/assets/javascripts/common/services/api.js.erb:    options.redirect_url = window.BS_ENV.www_host + 'signin/callback?' + $api.toKeyValue(redirect_params);
+app/assets/javascripts/common/services/api.js.erb:    return window.BS_ENV.api_host + 'auth/' + provider + '?' + $api.toKeyValue(options);
+app/assets/javascripts/common/services/api.js.erb:      path = window.BS_ENV.api_host + path.replace(/^\/+/,'');
+app/assets/javascripts/common/services/cart.js:  this._cookieName = window.BS_ENV.cookie_name_shopping_cart;
+app/assets/javascripts/common/factories/TeamBadge.js:    return window.BS_ENV.www_host + 'teams/' + this.team.slug;
+app/assets/javascripts/common/factories/TeamBadge.js:    return window.BS_ENV.api_host + 'badge/team?' + $api.toKeyValue({ team_id: this.team.id, style: this.type });
+app/assets/javascripts/common/factories/TeamBadgeBountiesReceived.js:    return window.BS_ENV.www_host + 'teams/' + this.team.slug + '/issues';
+app/assets/javascripts/common/factories/TeamBadgeBountiesPosted.js:    return window.BS_ENV.www_host + 'teams/' + this.team.slug + '/bounties';
+app/assets/javascripts/common/factories/IssueBadge.js:    return window.BS_ENV.www_host + 'issues/' + this.issue.slug;
+app/assets/javascripts/common/factories/IssueBadge.js:    return window.BS_ENV.api_host + 'badge/issue?' + $api.toKeyValue({ issue_id: this.issue.id });
+app/assets/javascripts/common/factories/TrackerBadge.js:    return window.BS_ENV.www_host + 'trackers/' + this.tracker.slug;
+app/assets/javascripts/common/factories/TrackerBadge.js:    return window.BS_ENV.api_host + 'badge/tracker?' + $api.toKeyValue({ tracker_id: this.tracker.id });
+app/assets/javascripts/salt/auth.js:    access_token_cookie_name: window.BS_ENV.cookie_name_access_token,
+app/assets/javascripts/salt/env.js:angular.module('app').constant('$env', window.BS_ENV);
+app/assets/javascripts/salt/google_analytics.js:ga('create', window.BS_ENV.google_analytics, 'auto');
+app/assets/javascripts/admin/api.js:    this.access_token_cookie_name = window.BS_ENV.cookie_name_access_token + '_admin';
+app/assets/javascripts/admin/api.js:    $rootScope.api_host = window.BS_ENV.api_host;
+app/assets/javascripts/admin/api.js:      options.redirect_url = window.BS_ENV.www_host + 'signin/callback?provider='+provider;
+app/assets/javascripts/admin/api.js:      return window.BS_ENV.api_host + 'auth/' + provider + '?' + $api.toKeyValue(options);
+app/views/layouts/_env.html.erb:  window.BS_ENV = {
