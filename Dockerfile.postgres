@@ -1,0 +1,2 @@
+FROM postgres:latest
+CMD postgres && psql -c 'create database bountysource_test;' -U postgres

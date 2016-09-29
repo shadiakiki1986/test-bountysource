@@ -1,0 +1,22 @@
+version: '2'
+services:
+  bountysource:
+    image: bountysource/core:local
+#    hostname: ffa24
+    depends_on:
+      - db
+    environment:
+    - DATABASE_URL=postgres://postgres@db/bountysource_test
+
+  db:
+    build: 
+      context: .
+      dockerfile: Dockerfile.postgres
+#    depends_on:
+#    - postgres
+#    volumes:
+#      - /data/db:/data/db
+
+#  postgres:
+#    image: postgres:latest 
+

@@ -19,3 +19,9 @@ For the env vars lists, check files:
 * env-nonconfig-bsenv
 
 I need to work through them and set up what I need
+
+Starting with the database env var,
+I set up a `docker-compose.yml` file,
+with a database initialization line from the `.travis.yml` file,
+but `postgres` requires setting up a non-privileged user.
+Besides, bountysource still complains about missing other env vars
