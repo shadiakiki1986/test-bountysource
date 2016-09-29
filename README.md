@@ -6,6 +6,8 @@ I thought of using the [bountysource/core:master](https://hub.docker.com/r/bount
 image on hub.docker.com, but it's 2 months old, so I decided to build my own.
 
 ```
+git clone https://github.com/bountysource/core bountysource-core
+cd bountysource-core
 docker run -p 80:3000 -it bountysource/core:local
 docker build -t bountysource/core:local .
 ```
